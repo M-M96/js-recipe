@@ -1,0 +1,27 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(94, 79, 179);
+  margin-bottom: 10px;
+}
+
+.rounded {
+  border-radius: 50px;
+  background-color: rgb(240, 128, 197);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 50px solid white;
+  border-bottom: 100px solid rgb(57, 167, 57);
+  border-left: 50px solid white;
+}
+
+.transition {
+  transition: all 1s;
+}
+
+.transition1 {
+  transition: none;
+}
