@@ -2,14 +2,31 @@ const inputElement = document.getElementById("input-todo")
 const container = document.getElementById("cards-container")
 const addButton = document.getElementById("add-button")
 
+// 3つのlist-containerに反映
+// for () {
+
+// }
+
 // 追加ボタンを押したときの処理を登録
 addButton.onclick = function() {
-  // カードを作成する
+  //   // カードを作成する
   const card = createCard(inputElement.value)
   container.append(card)
 
-  // 入力欄を空にする
+  //   // 入力欄を空にする
   inputElement.value = ""
+}
+
+// エンターキーイベント
+inputElement.onkeypress = function(e) {
+  if (e.keyCode === 13) {
+    // カードを作成する
+    const card = createCard(inputElement.value)
+    container.append(card)
+
+    // 入力欄を空にする
+    inputElement.value = ""
+  }
 }
 
 const createCard = function(text) {
